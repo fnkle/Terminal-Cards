@@ -25,7 +25,6 @@ public:
     std::list<Card> cards;
     int handLimit;
 
-    Card drawCard(Deck deck);
     Hand(std::list<Card> cards);
 };
 

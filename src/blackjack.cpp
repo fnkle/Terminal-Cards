@@ -5,6 +5,7 @@ BlackJack::BlackJack(Deck* deck){
         
     this->deck = deck;
         
+    //Genereate the hands using Dealer static function then assign it to the dealer and player hand
     std::list<Hand> hands = Dealer::dealHands(2, 2, deck);
 
     Hand playerHand = hands.front();
@@ -12,9 +13,9 @@ BlackJack::BlackJack(Deck* deck){
     Hand dealerHand = hands.front();
     hands.pop_front();
 
-    //Game loop
     bool loop = true;
 
+    //Game loop
     while(loop){
         std::cout<< "Dealer Hand: " + generateHandString(dealerHand) + "\n";
         std::cout<< "Player Hand: " + generateHandString(playerHand) + "\n \n";
